@@ -91,6 +91,9 @@ class MazeEnv(gym.Env):
         self.steps_beyond_done = None
         self.done = False
         return self.state
+    
+    def reset(self):
+        self._reset()
 
     def is_game_over(self):
         return self.maze_view.game_over
